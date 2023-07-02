@@ -15,7 +15,6 @@ public class StockGrabber implements Subject {
         this.observers = new ArrayList<>();
     }
 
-
     @Override
     public void register(Observer newObserver) {
         observers.add(newObserver);

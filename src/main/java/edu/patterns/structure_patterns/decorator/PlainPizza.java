@@ -4,10 +4,10 @@ public class PlainPizza implements Pizza {
 
     protected Dough dough;
 
+
     public PlainPizza(Dough dough) {
         this.dough = dough;
     }
-
 
     @Override
     public String getPizzaDescription() {

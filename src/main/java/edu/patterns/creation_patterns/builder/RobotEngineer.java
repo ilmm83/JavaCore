@@ -4,13 +4,13 @@ public class RobotEngineer {
 
     private IRobotBuilder builder;
 
+
     public RobotEngineer(IRobotBuilder builder) {
         this.builder = builder;
     }
 
-
     public IRobot build() {
-        return this.builder.getRobot();
+        return builder.getRobot();
     }
 
     public CustomRobotBuilder builder() {
@@ -18,10 +18,10 @@ public class RobotEngineer {
     }
 
     public RobotEngineer makeDefaultRobot() {
-        this.builder.buildRobotHead();
-        this.builder.buildRobotTorso();
-        this.builder.buildRobotArms();
-        this.builder.buildRobotLegs();
+        builder.buildRobotHead();
+        builder.buildRobotTorso();
+        builder.buildRobotArms();
+        builder.buildRobotLegs();
 
         return this;
     }

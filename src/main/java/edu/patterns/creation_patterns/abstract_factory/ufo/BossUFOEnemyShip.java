@@ -9,14 +9,14 @@ public class BossUFOEnemyShip extends UFOEnemyShip {
 
     private IEnemyShipFactory factory;
 
+
     public BossUFOEnemyShip(IEnemyShipFactory factory) {
         super(factory);
 
         this.factory = factory;
-        setName(BOSS_UFO.toString());
+        setName(BOSS_UFO.name());
     }
 
-    
     @Override
     public void makeShip() {
         System.out.println("Making enemy ship " + getName());

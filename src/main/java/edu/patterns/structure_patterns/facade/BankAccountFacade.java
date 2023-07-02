@@ -9,6 +9,7 @@ public class BankAccountFacade {
     private SecurityCodeCheck securityCodeChecker;
     private AccountNumberCheck accountNumberChecker;
 
+
     public BankAccountFacade(int accountNumber, int securityCode) {
         this.accountNumber = accountNumber;
         this.securityCode = securityCode;
@@ -18,7 +19,6 @@ public class BankAccountFacade {
         securityCodeChecker = new SecurityCodeCheck(this.securityCode);
         accountNumberChecker = new AccountNumberCheck(this.accountNumber);
     }
-
 
     public void withdrawCash(double moneyToWithdrawal) {
         if (!isAllChecksSuccess()) return;

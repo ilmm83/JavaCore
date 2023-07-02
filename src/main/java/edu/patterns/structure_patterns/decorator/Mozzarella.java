@@ -6,7 +6,6 @@ public class Mozzarella extends ToppingDecorator {
         super(pizza);
     }
 
-
     @Override
     public String getPizzaDescription() {
         return super.getPizzaDescription() + ", Mozzarella";

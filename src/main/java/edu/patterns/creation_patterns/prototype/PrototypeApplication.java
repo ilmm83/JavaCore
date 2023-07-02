@@ -7,6 +7,5 @@ public class PrototypeApplication {
 
         var sheepCopy = sheep.makeCopy();
         System.out.println(System.identityHashCode(sheepCopy));
-
     }
 }

@@ -6,11 +6,11 @@ import static edu.patterns.creation_patterns.factory.EnemyShipName.UFO;
 
 public class EnemyShipApplication {
     public static void main(String[] args) {
-        var Ufo = EnemyShipFactory.getEnemyShipInstance(UFO);
-        var Rocket = EnemyShipFactory.getEnemyShipInstance(ROCKET);
+        var ufo = EnemyShipFactory.getEnemyShipInstance(UFO);
+        var rocket = EnemyShipFactory.getEnemyShipInstance(ROCKET);
 
-        doStuff(Ufo);
-        doStuff(Rocket);
+        doStuff(ufo);
+        doStuff(rocket);
     }
 
     private static void doStuff(EnemyShip enemyShip) {

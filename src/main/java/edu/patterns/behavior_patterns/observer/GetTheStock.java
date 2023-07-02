@@ -12,6 +12,7 @@ public class GetTheStock implements Runnable {
     private double price;
     private Subject stockGrabber;
 
+
     public GetTheStock(int startTimeInSeconds, Stock stock, double price, Subject stockGrabber) {
         this.startTime = startTimeInSeconds;
         this.stock = stock;
@@ -19,12 +20,11 @@ public class GetTheStock implements Runnable {
         this.stockGrabber = stockGrabber;
     }
 
-
     @Override
     public void run() {
         for (int i = 1; i <= 20; i++) {
             try {
-                Thread.sleep(startTime * 1000L);
+                Thread.sleep(startTime * 1_000L);
             } catch (InterruptedException e) {}
 
             var random = (Math.random() * (.06) - .03);

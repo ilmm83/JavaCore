@@ -17,10 +17,10 @@ public abstract class EntertainmentDevice {
     }
 
     public void pressButtonThree() {
-        System.out.println("Volume at: " + ++volumeLevel);
+        System.out.println("Volume up to: " + ++volumeLevel);
     }
 
     public void pressButtonFour() {
-        System.out.println("Volume at: " + --volumeLevel);
+        System.out.println("Volume down to: " + --volumeLevel);
     }
 }

@@ -10,10 +10,10 @@ public class RobotBuildingApplication {
 
 
         var customRobot = engineer.builder()
-                .setRobotHead("Tin Head")
-                .setRobotArms("Tin Arms")
-                .setRobotTorso("Tin Torso")
-                .setRobotLegs("Tin Legs")
+                .setRobotHead("Golden Head")
+                .setRobotArms("Iron Arms")
+                .setRobotTorso("Titan Torso")
+                .setRobotLegs("Adamant Legs")
                 .build();
 
         System.out.printf("\nCustom robot: %s", customRobot);

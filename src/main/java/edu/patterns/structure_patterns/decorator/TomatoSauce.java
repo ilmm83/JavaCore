@@ -6,7 +6,6 @@ public class TomatoSauce extends ToppingDecorator {
         super(pizza);
     }
 
-
     @Override
     public String getPizzaDescription() {
         return super.getPizzaDescription() + ", Tomato sauce";

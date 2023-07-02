@@ -10,10 +10,11 @@ public class RocketEnemyShip extends EnemyShip {
 
     private IEnemyShipFactory factory;
 
+
     public RocketEnemyShip(IEnemyShipFactory factory) {
         this.factory = factory;
 
-        setName(ROCKET.toString());
+        setName(ROCKET.name());
     }
 
     @Override

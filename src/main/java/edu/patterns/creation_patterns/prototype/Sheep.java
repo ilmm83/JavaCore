@@ -1,17 +1,12 @@
 package edu.patterns.creation_patterns.prototype;
 
+import lombok.SneakyThrows;
+
 public class Sheep implements Animal {
 
     @Override
+    @SneakyThrows
     public Animal makeCopy() {
-        Sheep sheep;
-
-        try {
-            sheep = (Sheep) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException(e);
-        }
-
-        return sheep;
+        return (Sheep) super.clone();
     }
 }
