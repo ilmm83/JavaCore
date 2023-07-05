@@ -1,2 +1,3 @@
 rootProject.name = 'JavaCore'
+include 'JavaEE'
 
