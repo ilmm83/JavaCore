@@ -22,9 +22,11 @@ public class TopologicalSort {
     private static int dfs(int i, int at, boolean[] visited, int[] ordering, Map<Integer, List<Edge>> graph) {
         visited[at] = true;
         List<Edge> edges = graph.get(at);
-        if (edges != null)
+        if (edges != null) {
             for (Edge edge : edges) if (!visited[edge.to]) i = dfs(i, edge.to, visited, ordering, graph);
+        }
         ordering[i] = at;
+
         return i - 1;
     }
 
@@ -37,10 +39,14 @@ public class TopologicalSort {
     // wouldn't be present in the adjacency list but are still part of the graph!
     //
     public static int[] topologicalSort(Map<Integer, List<Edge>> graph, int numberOfNodes) {
-        int i = numberOfNodes - 1;
-        boolean[] visited = new boolean[numberOfNodes];
-        int[] ordering = new int[numberOfNodes];
-        for (int at = 0; at < i; at++) if (!visited[at]) at = dfs(i, at, visited, ordering, graph);
+        var i = numberOfNodes - 1;
+        var visited = new boolean[numberOfNodes];
+        var ordering = new int[numberOfNodes];
+
+        for (int at = 0; at < i; at++) {
+            if (!visited[at]) at = dfs(i, at, visited, ordering, graph);
+        }
+
         return ordering;
     }
 
@@ -55,10 +61,12 @@ public class TopologicalSort {
         int[] topsort = topologicalSort(graph, numNodes);
         Integer[] dist = new Integer[numNodes];
         dist[start] = 0;
+
         for (int i = 0; i < numNodes; i++) {
-            int nodeIndex = topsort[i];
+            var nodeIndex = topsort[i];
             if (dist[nodeIndex] != null) {
                 List<Edge> adjacentEdges = graph.get(nodeIndex);
+
                 if (adjacentEdges != null) {
                     for (Edge edge : adjacentEdges) {
                         int newDist = dist[nodeIndex] + edge.weight;
@@ -68,6 +76,7 @@ public class TopologicalSort {
                 }
             }
         }
+
         return dist;
     }
 }

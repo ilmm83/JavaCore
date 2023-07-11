@@ -57,7 +57,6 @@ class Graph {
         }
     }
 
-
     // print adjacency list for the graph
     public static void printGraph(Graph graph) {
         int srcVertex = 0;
@@ -74,7 +73,6 @@ class Graph {
             srcVertex++;
         }
     }
-
 }
 
 

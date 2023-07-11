@@ -17,7 +17,6 @@ public class CookieServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var writer = resp.getWriter();
         var cookies = req.getCookies();
-
         var customCookie = new Cookie("CustomCookie", "Value_of_the_Custom_Cookie");
         customCookie.setMaxAge(5);
         customCookie.setPath("/cookies");
@@ -26,6 +25,5 @@ public class CookieServlet extends HttpServlet {
 
         Arrays.stream(cookies)
             .forEach(cookie -> writer.write(cookie.getName() + " --> " + cookie.getValue() + "\n"));
-
     }
 }
