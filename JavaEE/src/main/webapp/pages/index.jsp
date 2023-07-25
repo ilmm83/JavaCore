@@ -7,5 +7,9 @@
 
     <body>
          <%= new Date(); %>
+
+        <form method="get" action="/logout">
+            <input type="submit" value="Log out" />
+        </form>
     </body>
 </html>
