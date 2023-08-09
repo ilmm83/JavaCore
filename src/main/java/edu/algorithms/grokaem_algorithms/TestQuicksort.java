@@ -22,9 +22,10 @@ public class TestQuicksort {
 
 class Quicksort {
 
-    public static void quicksort(int[] arr){
+    public static void quicksort(int[] arr) {
         quicksort(arr, 0, arr.length - 1);
     }
+
     // method to find the partition position
     private static void quicksort(int[] arr, int lowIndex, int highIndex) {
         // Declare base case
@@ -49,8 +50,7 @@ class Quicksort {
     // and all the numbers greater than the pivot to the right
     private static int partition(int[] arr, int lowIndex, int highIndex, int pivot) {
         // 2.1 declare left pointer and right pointer
-        int lp = lowIndex;
-        int rp = highIndex;
+        int lp = lowIndex, rp = highIndex;
 
         while (lp < rp) {
             while (arr[lp] <= pivot && lp < rp) {
@@ -64,6 +64,7 @@ class Quicksort {
             swap(arr, lp, rp);
         }
         swap(arr, lp, highIndex);
+
         return lp;
     }
 

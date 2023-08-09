@@ -4,16 +4,19 @@ import java.util.Arrays;
 
 public class BinarySearch {
 
-    public static int binarySearch(int[] array, int target) {
-        Arrays.sort(array);
-        int s = 0, e = array.length;
+    public static int bs(int[] arr, int target) {
+        Arrays.sort(arr);
 
-        while (s < e) {
-            int m = (s + e) / 2;
-            if (m < target) s = m + 1;
-            else if (m > target) e = m - 1;
-            else return m;
+        int s = 0, e = arr.length - 1;
+
+        while (s <= e) {
+            var m = (s + e) / 2;
+
+            if (arr[m] == target) return m;
+            else if (arr[m] < target) s = m + 1;
+            else e = m - 1;
         }
-        throw new IllegalArgumentException("value " + target + " is not exists");
+
+        return -1;
     }
 }

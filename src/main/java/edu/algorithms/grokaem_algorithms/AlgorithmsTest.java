@@ -4,6 +4,8 @@ package edu.algorithms.grokaem_algorithms;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class AlgorithmsTest {
 
     private int[] array = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -12,13 +14,13 @@ public class AlgorithmsTest {
     @Test
     void canFindTargetViaBinarySearch() {
         // given
-        var target = 2;
+        var target = 8;
 
         // when
-        var found = BinarySearch.binarySearch(array, target);
+        var found = BinarySearch.bs(array, target);
 
         // then
-        Assertions.assertEquals(array[found - 1], target);
+        assertEquals(array[found], target);
     }
 
     @Test
@@ -30,7 +32,7 @@ public class AlgorithmsTest {
         var found = RecursiveBinarySearch.binarySearchWithRecursion(array, target);
 
         // then
-        Assertions.assertEquals(array[found], target);
+        assertEquals(array[found], target);
     }
 
     @Test

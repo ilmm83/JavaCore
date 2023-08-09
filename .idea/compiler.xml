@@ -10,6 +10,8 @@
         </processorPath>
         <module name="JavaCore.test" />
         <module name="JavaCore.main" />
+        <module name="JavaCore.JavaEE.test" />
+        <module name="JavaCore.JavaEE.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="20" />
